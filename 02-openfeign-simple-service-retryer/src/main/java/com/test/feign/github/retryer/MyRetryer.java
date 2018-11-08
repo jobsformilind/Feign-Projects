@@ -1,4 +1,4 @@
-package com.test.feign.github;
+package com.test.feign.github.retryer;
 
 import feign.RetryableException;
 import feign.Retryer;

@@ -1,4 +1,4 @@
-package com.test.feign.github;
+package com.test.feign.github.hysterix;
 
 import lombok.Data;
 
