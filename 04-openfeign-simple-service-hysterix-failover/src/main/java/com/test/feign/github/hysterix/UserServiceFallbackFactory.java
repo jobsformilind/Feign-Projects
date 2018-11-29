@@ -5,16 +5,16 @@ import feign.gson.GsonDecoder;
 import feign.hystrix.FallbackFactory;
 import feign.hystrix.HystrixFeign;
 
-public class GitHubFallbackFactory implements FallbackFactory<GitHub>{
+public class UserServiceFallbackFactory implements FallbackFactory<UserService>{
 
 	@Override
-	public GitHub create(Throwable ex) {
+	public UserService create(Throwable ex) {
 		System.out.println("Invoking fallback since we got exception: " + ex.getMessage());
 		return HystrixFeign.builder()
 				.decoder(new GsonDecoder())
                 .logger(new Logger.JavaLogger().appendToFile("simpleApp-fallback.log"))
                 .logLevel(Logger.Level.FULL)
-				.target(GitHub.class, "https://api.github.com");
+				.target(UserService.class, "https://jsonplaceholder.typicode.com");
 	}
 
 }
