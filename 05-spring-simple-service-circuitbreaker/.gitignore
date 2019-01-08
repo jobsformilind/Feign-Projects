@@ -1,27 +1,22 @@
-target
-storage/
-!.mvn/wrapper/maven-wrapper.jar
-.log
-.mvn
+hs_err_pid*
 
-### STS ###
+*.log
+*.class
+*.ctxt
+*.jar
+
+.settings
+.mvn
 .apt_generated
-.classpath
 .factorypath
-.project
 .settings
 .springBeans
+.mtj.tmp
+.gradle
 
-### IntelliJ IDEA ###
-.idea
-*.iws
-*.iml
-*.ipr
-
-### NetBeans ###
-nbproject/private/
+bin/
+storage/
+target/
 build/
 nbbuild/
 dist/
-nbdist/
-.nb-gradle/
